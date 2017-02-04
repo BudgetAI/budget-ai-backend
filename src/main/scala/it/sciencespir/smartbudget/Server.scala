@@ -9,6 +9,9 @@ import org.http4s.server.blaze.BlazeBuilder
 import scalaz.concurrent.Task
 import org.http4s.server.ServerApp
 
+import scalaz._
+import Scalaz._
+
 
 
 object SmartBudgetServer extends ServerApp {

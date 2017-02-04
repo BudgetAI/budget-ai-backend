@@ -17,7 +17,10 @@ abstract class CRUDTable[T](tag: Tag, tableName: String) extends Table[T](tag, t
 
 class Users(tag: Tag) extends CRUDTable[User](tag, "Users") {
   def name = column[String]("name")
-  def * = (id, name) <> (User.tupled, User.unapply)
+  def email = column[String]("email")
+  def password_hash = column[String]("password_hash")
+  def password_salt = column[String]("password_salt")
+  def * = (id, name, email, password_hash, password_salt) <> ((User.apply _).tupled, User.unapply)
 }
 
 class Operations(tag: Tag) extends CRUDTable[Operation](tag, "Operations") {

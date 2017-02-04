@@ -1,16 +1,15 @@
 package it.sciencespir.smartbudget.DB.query
 
-import java.util.{NoSuchElementException, UUID}
-
 import it.sciencespir.smartbudget.DB.table._
 import it.sciencespir.smartbudget.DB.model._
-import slick.lifted.{TableQuery, Tag}
 import it.sciencespir.smartbudget.DB.driver.PGDriver.api._
 import slick.dbio.DBIOAction
 import slick.jdbc.meta.MTable
+import slick.lifted.{TableQuery, Tag}
 
 import scala.concurrent.ExecutionContext
 import scala.util.{Success, Try}
+import scalaz.concurrent.Task
 
 
 /**
@@ -53,7 +52,10 @@ abstract class CRUDQuery[M <: CRUD, MT <: CRUDTable[M]](cons: Tag => MT) extends
 class CategoriesCRUDQuery extends CRUDQuery[Category, Categories](new Categories(_)) { }
 object categories extends CategoriesCRUDQuery
 
-class UsersCRUDQuery extends CRUDQuery[User, Users](new Users(_)) { }
+class UsersCRUDQuery extends CRUDQuery[User, Users](new Users(_)) {
+  def find(email: String) =
+    filter(_.email === email).result
+}
 object users extends UsersCRUDQuery
 
 class OperationsCRUDQuery extends CRUDQuery[Operation, Operations](new Operations(_)) { }

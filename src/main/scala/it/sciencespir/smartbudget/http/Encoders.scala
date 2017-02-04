@@ -21,10 +21,10 @@ object Codecs {
 object Encoders {
   private val argonautInstances = ArgonautInstances.withPrettyParams(PrettyParams.spaces2)
 
-  implicit def modelEncoder[T <: CRUD](implicit encodeJson: EncodeJson[T]) =
+  implicit def modelEncoder[T](implicit encodeJson: EncodeJson[T]) =
     argonautInstances.jsonEncoderOf[T]
 
-  implicit def modelDecoder[T <: CRUD](implicit decodeJson: DecodeJson[T]) =
+  implicit def modelDecoder[T](implicit decodeJson: DecodeJson[T]) =
     argonautInstances.jsonOf[T]
 
 }

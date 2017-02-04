@@ -31,7 +31,7 @@ object CRUDResource {
 
     case GET -> Root / `basePath` / IdVar(id) =>
       modelService.find(id) flatMap {
-        case Some(model) => Ok(model)
+        case Some(model) => Ok.apply(model)
         case None => NotFound()
       }
 
