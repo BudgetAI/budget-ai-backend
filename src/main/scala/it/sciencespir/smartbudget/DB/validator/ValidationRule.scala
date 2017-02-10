@@ -5,8 +5,7 @@ package it.sciencespir.smartbudget.DB.validator
   */
 
 import argonaut._
-import ArgonautShapeless._
-import Argonaut._
+import it.sciencespir.smartbudget.http.APIError
 import org.http4s._
 
 import scalaz.syntax.foldable._
@@ -16,6 +15,8 @@ import scalaz.concurrent.Task
 import org.http4s.EntityEncoder
 import org.http4s.argonaut.ArgonautInstances
 import org.http4s.dsl._
+import it.sciencespir.smartbudget.http.Encoders._
+import it.sciencespir.smartbudget.http.APIError._
 
 object Validation {
   object dsl {
@@ -43,17 +44,6 @@ object Validation {
     }
     val unknown = RuleViolation("Unknown violation")
   }
-
-  implicit val ruleViolationCoder = EncodeJson.of[List[RuleViolation]]
-  implicit val ruleViolationEntityCoder = ArgonautInstances.withPrettyParams(PrettyParams.spaces2).jsonEncoderOf[List[RuleViolation]](ruleViolationCoder)
-
-  class MessageFailureValidation[T](violations: NonEmptyList[RuleViolation]) {
-    def toMessageFailure(): MessageFailure =
-      GenericMessageBodyFailure("Message didn't pass validation", None, httpVersion => ruleViolationEntityCoder.toEntity(violations.list.toList).map(entity => Response(Status.BadRequest, httpVersion, body = entity.body)))
-  }
-
-  implicit def toMsgFailureValidation[T](violations: NonEmptyList[RuleViolation]) = new MessageFailureValidation(violations)
-
 }
 
 
