@@ -17,11 +17,13 @@ object CRUDResource {
   def apply[T <: CRUD](basePath: String)(implicit
                                          modelService: CRUDService[T, _],
                                          jsonEncoder: EntityEncoder[T],
+                                         jsonListEncoder: EntityEncoder[List[T]],
                                          jsonDecoder: EntityDecoder[T]) = HttpService {
 
-//    case GET -> Root / basePath =>
-//      modelService.list
-//        .flatMap(Ok(_))
+    case GET -> Root / basePath =>
+      modelService.list
+        .map(_.toList)
+        .flatMap(Ok(_))
 
     case request@POST -> Root / `basePath` =>
       request.decode[T] { model =>
@@ -43,6 +45,8 @@ object CRUDResource {
       }
   }
 }
+
+
 
 object IdVar {
   def unapply(string: String): Option[Int] =

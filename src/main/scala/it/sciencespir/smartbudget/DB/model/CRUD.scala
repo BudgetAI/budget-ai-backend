@@ -6,3 +6,7 @@ package it.sciencespir.smartbudget.DB.model
 trait CRUD {
   val id: Int
 }
+
+trait AuthCRUD extends CRUD {
+  val user_id: Int
+}

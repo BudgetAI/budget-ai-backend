@@ -32,10 +32,13 @@ object EncryptedPassword {
 }
 
 object User {
-  implicit val userEncodeJson = jencode3L((u: User) => (u.id, u.name, u.email))("id", "name", "email")
+  implicit val userProfileEncodeJson = EncodeJson.of[UserProfile]
+  implicit val userProfileDecodeJson = DecodeJson.of[UserProfile]
   implicit val userFormDecodeJson = DecodeJson.of[UserForm]
   implicit val userLoginDecodeJson = DecodeJson.of[UserLoginForm]
   implicit val userAuthEncodeJson = EncodeJson.of[UserAuth]
+
+  implicit def toUserProfile(user: User) = UserProfile(user.id, user.name, user.email)
 
   def validName(name: String): Boolean = {
     return name.length > 0
@@ -63,13 +66,21 @@ object User {
 object UserAuth {
   val secretKey = ConfigFactory.load().getString("jwtSecretKey")
 
-  def apply(user: User): UserAuth = {
-
+  def apply(user: UserProfile): UserAuth = {
     val header = JwtHeader("HS256")
     val claimsSet = JwtClaimsSet(user.asJson.nospaces)
     val jwt: String = JsonWebToken(header, claimsSet, secretKey)
     UserAuth(jwt)
+
   }
+
+  def userProfile(jwt: String): Option[UserProfile] =  jwt match {
+    case JsonWebToken(header, claimsSet, signature) =>
+      claimsSet.asJsonString.decodeOption[UserProfile]
+    case x =>
+      None
+    }
+
 }
 
 trait Profile {
@@ -78,6 +89,8 @@ trait Profile {
 }
 
 case class User private (id: Int, name: String, email: String, password_hash: String, salt: String) extends CRUD with Profile
+case class UserProfile (id: Int, name: String, email: String) extends Profile
+
 case class UserForm (name: String, email: String, password: String) extends Profile
 case class UserLoginForm(email: String, password: String)
 case class UserAuth private (jwt: String)

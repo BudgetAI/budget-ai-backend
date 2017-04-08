@@ -6,11 +6,12 @@ logLevel := Level.Debug
 
 resolvers += Resolver.bintrayRepo("hmrc", "releases")
 
+val http4sVersion = "0.15.7"
 
 libraryDependencies ++= Seq(
-  "org.http4s" %% "http4s-blaze-server" % "0.15.2a",
-  "org.http4s" %% "http4s-dsl"          % "0.15.2a",
-  "org.http4s" %% "http4s-argonaut"     % "0.15.2a",
+  "org.http4s" %% "http4s-dsl" % http4sVersion,
+  "org.http4s" %% "http4s-blaze-server" % http4sVersion,
+  "org.http4s" %% "http4s-blaze-client" % http4sVersion,
   "com.github.alexarchambault" %% "argonaut-shapeless_6.2" % "1.2.0-M4",
   "com.jason-goodwin" %% "authentikat-jwt" % "0.4.5",
   "com.github.t3hnar" %% "scala-bcrypt" % "3.0",
