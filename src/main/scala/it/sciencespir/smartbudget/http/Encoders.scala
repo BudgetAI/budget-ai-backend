@@ -6,7 +6,7 @@ import it.sciencespir.smartbudget.DB.model._
 import org.http4s.EntityEncoder
 import org.http4s.argonaut.ArgonautInstances
 import org.joda.time.DateTime
-import org.joda.time.format.DateTimeFormat
+import org.joda.time.format.{DateTimeFormat, ISODateTimeFormat}
 
 /**
   * Created by kamilbadyla on 21/01/17.
@@ -16,7 +16,7 @@ import org.joda.time.format.DateTimeFormat
 object Codecs {
   implicit val dateTimeCodec = CodecJson[DateTime](
     _.toString.asJson,
-    _.as[String].map(DateTimeFormat.fullDateTime().parseDateTime(_)))
+    _.as[String].map(ISODateTimeFormat.dateTimeParser().parseDateTime(_)))
 }
 
 object Encoders {

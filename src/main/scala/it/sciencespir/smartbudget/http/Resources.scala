@@ -20,7 +20,7 @@ object CRUDResource {
                                          jsonListEncoder: EntityEncoder[List[T]],
                                          jsonDecoder: EntityDecoder[T]) = HttpService {
 
-    case GET -> Root / basePath =>
+    case GET -> Root / `basePath` =>
       modelService.list
         .map(_.toList)
         .flatMap(Ok(_))
