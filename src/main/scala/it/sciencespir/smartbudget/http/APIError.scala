@@ -20,6 +20,7 @@ object APIErrorTypes {
     val code: Int
   )
   case object Validation extends Type("Validation Error", 100)
+  case object Unknown extends Type("Unknown Error", 500)
 }
 
 case class APIError(errorType: APIErrorTypes.Type, reasons: List[APIErrorReason])
@@ -29,6 +30,8 @@ object APIError {
   implicit def ruleViolationToReason(rules: List[RuleViolation]) = rules.map(rule => APIErrorReason(rule.reason))
   implicit def ruleViolationToAPIError(rules: List[RuleViolation]) = APIError(APIErrorTypes.Validation, rules)
   implicit def ruleViolationToAPIError(rules: NonEmptyList[RuleViolation]) = APIError(APIErrorTypes.Validation, rules.list.toList)
+
+  implicit def throwableToAPIError(throwable: Throwable) = APIError(APIErrorTypes.Unknown, List(APIErrorReason(throwable.getLocalizedMessage)))
 
   implicit def apiErrorReasonsToJson = EncodeJson.of[APIErrorReason]
   implicit def apiErrorToJSON: EncodeJson[APIError] = jencode3L((e: APIError) => (e.errorType.name, e.errorType.code, e.reasons))("name", "code", "reasons")

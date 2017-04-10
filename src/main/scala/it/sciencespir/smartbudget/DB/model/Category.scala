@@ -17,7 +17,6 @@ object CategoryJSON {
   implicit def CategoryDecodeJSON: DecodeJson[Category] =
     DecodeJson(c => for {
       name <- (c --\ "name").as[String]
-      age <- (c --\ "creator").as[Option[Int]]
-    } yield Category(0, name, age))
+    } yield Category(0, name, None))
 
 }
