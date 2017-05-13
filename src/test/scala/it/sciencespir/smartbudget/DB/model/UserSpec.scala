@@ -10,7 +10,7 @@ import com.github.t3hnar.bcrypt._
   */
 class UserTest extends FlatSpec with GeneratorDrivenPropertyChecks with Matchers with DisjunctionMatchers {
 
-  "encodePassword" should "should hash password" in {
+  "Encode Password" should "should hash password" in {
     forAll { (password: String) =>
       whenever(password.length > 0) {
         EncryptedPassword.encodePassword(password).validate(password) shouldBe true

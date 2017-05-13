@@ -11,11 +11,12 @@ class FlatLocationOperationTest extends FlatSpec with GeneratorDrivenPropertyChe
 
   "FlatLocationOperator" should "create Operation" in {
     forAll { (id: Int, amount: Float, latitude: Option[Float], longitude: Option[Float], category: Int, user: Int) =>
-      val operation = FlatLocationOperation(id, amount, DateTime.now(), latitude, longitude, category, user)
+      val operation = FlatLocationOperation(id, amount, DateTime.now(), latitude, longitude, None, category, user)
       operation.user_id shouldBe user
       operation.id shouldBe id
       operation.amount shouldBe amount
       operation.category_id shouldBe category
+//      operation.place shouldBe place_id
       if (latitude.isEmpty || longitude.isEmpty) {
         operation.location.isEmpty shouldBe true
       }

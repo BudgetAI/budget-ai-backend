@@ -24,6 +24,7 @@ class OperationsResourceTest extends WordSpec with BeforeAndAfter {
   }
   before {
     TestHttpService.usersService.initializeIfNeeded().unsafePerformSync
+    TestHttpService.placesService.initializeIfNeeded().unsafePerformSync
     TestHttpService.categoriesService.initializeIfNeeded().unsafePerformSync
     TestHttpService.operationsService.initializeIfNeeded().unsafePerformSync
 
@@ -31,8 +32,8 @@ class OperationsResourceTest extends WordSpec with BeforeAndAfter {
     TestHttpService.categoriesService.create(Category(1,"test", None)).unsafePerformSync
     TestHttpService.usersService.create(User(1, "test", "test123@gmail.com", "", "")).unsafePerformSync
     TestHttpService.usersService.create(User(2, "test", "test124@gmail.com", "", "")).unsafePerformSync
-    TestHttpService.operationsService.create(Operation(1, 0.1f, DateTime.now(), None, 1, 1)).unsafePerformSync
-    TestHttpService.operationsService.create(Operation(2, 0.1f, DateTime.now(), None, 1, 2)).unsafePerformSync
+    TestHttpService.operationsService.create(Operation(1, 0.1f, DateTime.now(), None, None, 1, 1)).unsafePerformSync
+    TestHttpService.operationsService.create(Operation(2, 0.1f, DateTime.now(), None, None, 1, 2)).unsafePerformSync
   }
 
   "Operations request" should {

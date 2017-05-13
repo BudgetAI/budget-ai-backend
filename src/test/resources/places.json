@@ -1,0 +1,598 @@
+{
+  "html_attributions": [],
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4359468,
+          "lng": 18.8460247
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.5313455,
+            "lng": 18.9144319
+          },
+          "southwest": {
+            "lat": 50.40020740000001,
+            "lng": 18.7696221
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id": "48acc9c0af3229ba691776554bf9f18dfcce3053",
+      "name": "Tarnowskie Gory",
+      "photos": [
+        {
+          "height": 1366,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102751685154476863006/photos\">Jan Mehlich</a>"
+          ],
+          "photo_reference": "CoQBdwAAALRw141JC7o-W1AIFSx720__hbpiim5EHPcmk3argl5upcgSlJeW5PdaZRhSZyA7gcgh2VvvoIc8f8FtpMJwHzEGxhWFejs3O0UsSPKZgmZtpt8ALtSkEStq9sGHMqsbaeEopgSY26WBWWR6dOxQBfxxjET5C9i8vswpdAKkfFteEhD4MOc_g68_IMvE5Q1z99-EGhSLrTjWOjSju5w919vNJkQ3nUe6iA",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJF26hce4pEUcRlD8cb1rRadA",
+      "reference": "CmRbAAAAzZGkISh7J5HHDFP2jeG2ALjIEPlE-3DMuoD03PZWT92BWIKv9BvOHLGoLbHgYgjYQlE-Phjd_FBZuePs7wqHmbJ8nv-jon6r-VQPp7mvewhqL4ufkfDHwb414-lON5wkEhDq8BSbU84XOoim4ZHdzi55GhRBQbV2H9S_IOMa8aWb7qxqdPlEVw",
+      "scope": "GOOGLE",
+      "types": [
+        "locality",
+        "political"
+      ],
+      "vicinity": "Tarnowskie Gory"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.439636,
+          "lng": 18.8365699
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4412096302915,
+            "lng": 18.8382455802915
+          },
+          "southwest": {
+            "lat": 50.4385116697085,
+            "lng": 18.8355476197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+      "id": "c2eb86e46378d2a3d412ad61cb1038da88c499d7",
+      "name": "Neo",
+      "photos": [
+        {
+          "height": 1152,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113349068672195307596/photos\">Lucjan Nosarzewski</a>"
+          ],
+          "photo_reference": "CoQBdwAAAPj4KDyzAzif36WSLYFJhI3oUWSJI06U-40fTeNF7KVA1MpUMo9HRil4VFwPMTTfZ6CEMsZCZ_J7VPJvdT6VuGvwZe0vZLTCySWNdSIfco2NhfAk5sLoDTEfWzCRyvyL92n3MVFrMWlduCjfvVftycpr77DwP34ck8VXTna_uX5vEhCdmCkwQehq3Q6sjVzhSAnMGhR_ty6mkxCobev66o90CHpQ6r6cHg",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJI-iKfX8pEUcRhRWKqhQ-1mk",
+      "rating": 4.2,
+      "reference": "CmRRAAAAYlT_72aIYgvPfsg8TbDt8pvPqr60v8zJDc1R6E1Vb6TsSWzTEG2gwCPvrYyaWGXlj1KBxHtDhFI95YJtUYGCROvgGgOXKHslDqAz_vDcTWpbkrUDypkIHerEXQRnRZjJEhCDFYGhN8PiE6jfFv_iTNxcGhR8KmC48kGI6yrbuYqmEzluClpsrw",
+      "scope": "GOOGLE",
+      "types": [
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 6, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4383765,
+          "lng": 18.8372022
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4400399302915,
+            "lng": 18.8402106
+          },
+          "southwest": {
+            "lat": 50.43734196970851,
+            "lng": 18.83619940000001
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "8a914ffe6570deefa4e456d87c5572413750ee20",
+      "name": "Water Park, Sports Hall",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "photos": [
+        {
+          "height": 368,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117129828954468754686/photos\">Park Wodny, Hala Sportowa</a>"
+          ],
+          "photo_reference": "CoQBdwAAAFf_XdvqC68x0nSHk2h6DWq4A9qV-TSZBatOlzRJeDYUpHU57xppUDcRNofy7i9cKkhcIcbE-Vvw9TEAfI0x67HSslPquuP36IeKdb9YSLzLjpfnoR0SCy8InRHKLBEEwzkXpD2zwNL-OKXKE85nQ68NEvLRjclaZUOWD_mMpwEnEhBSWQjhOA3nJHyDZJkCowLCGhTgN4GjlbqEqDYJLmsegsmordh5qA",
+          "width": 367
+        }
+      ],
+      "place_id": "ChIJw541eH8pEUcRjxAD3_pTWbI",
+      "rating": 4.2,
+      "reference": "CmRSAAAAFu965WsgRA2zIpQTiPHT69oZ_H3UQIUwHHE0TpVyHoUcp01HrkiLnl4bPj2Nsr4fQYUB8b5g2E-UdrDU2wNtMV1AlSkKYXTGj6AJUshH9PH1f_xHfKjSyR7dKOafpCfBEhByfaGGvdRJJZGyFnByU2OqGhTv-RwOI0IDrYvAsdErkklOnOE3oA",
+      "scope": "GOOGLE",
+      "types": [
+        "amusement_park",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Park Wodny, Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4387813,
+          "lng": 18.837752
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4404555302915,
+            "lng": 18.8394816802915
+          },
+          "southwest": {
+            "lat": 50.4377575697085,
+            "lng": 18.8367837197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "3086631b1b347b40a81b985164e9b605eccd2f0a",
+      "name": "Dromader",
+      "place_id": "ChIJw541eH8pEUcRHleKtbt66U4",
+      "rating": 3.8,
+      "reference": "CmRRAAAArvl-ej9a7Vqa74RKiwwaDIxgUrLI8km74l4x21CvwVrVVLWIStJzfCAhqEmuG7hNZz5jCFMf7WnofifqBwcli3aFZ39BkWIhG3aTFv-dVvSpNdt7FujboAbBL-4Ct9pSEhBb2fRaOhdEUaefdr9yzjDTGhRHW3lHJabjUt9i14ax3VWACtg13w",
+      "scope": "GOOGLE",
+      "types": [
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4384264,
+          "lng": 18.83694299999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4403381802915,
+            "lng": 18.8389506302915
+          },
+          "southwest": {
+            "lat": 50.43764021970851,
+            "lng": 18.83625266970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "6e83e0423fb0e00a1640d6c73fc268c921e190e7",
+      "name": "Bar Rafa",
+      "place_id": "ChIJw541eH8pEUcRQnzXHbELzG0",
+      "rating": 5,
+      "reference": "CmRRAAAACkJsupPRoiArGagy5X47GtC6XAkTwYFXc1FFKX8EsWcIVo8i3sI7S0vF4NKVKfbLpgp4zNNRfwNnRcikKAt_YT_L87HjInDb0dKPeWsBP_u1F2VtAqy15XmcRFZpbbowEhCtpVDFmyuf_pxAdcNFukCMGhTInC-IHsCHsEVuBqDBp_xOL-gLEA",
+      "scope": "GOOGLE",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.438626,
+          "lng": 18.837579
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4403765802915,
+            "lng": 18.8393979802915
+          },
+          "southwest": {
+            "lat": 50.4376786197085,
+            "lng": 18.83670001970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "3cee982fef6d777c201170b3dbfca57822baec6a",
+      "name": "Centrum Nurkowe Blue Fin",
+      "photos": [
+        {
+          "height": 362,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112342867898707637231/photos\">Centrum Nurkowe Blue Fin</a>"
+          ],
+          "photo_reference": "CoQBdwAAAArYxiT2vBMDp_eQnDHbTmfvYKtgpURMn0qxHKBhZyBu1Ee0zAM8GVs-TT7Set9iRe5L-_qHbG0_QUFObjOPiMqHQivGj7QdDhP8GQ5ovM741f5hPK2BklOGaawCu0dxFUKi4oWqqYYq6qVdJXGGVmgdH8LCSWISrVCWfecLHFMdEhBVRBKQAaP_Bi_rV66tVarsGhTFqiYO72_hAWuPPQ2xTD9RJwM_DQ",
+          "width": 367
+        }
+      ],
+      "place_id": "ChIJxZ41eH8pEUcRt2MkjiiVpv0",
+      "reference": "CmRSAAAA1QDPQo6UYzGEwEuocddThJI90qkhctM0_wsaL8nwpqDNWoASd70OEMQ-bkU708pCc5AZlhyouYnekfRlL8sUHQM_3yPOQUx_ScaqRxInvGByAhKN2S7xvxcYnH41YU4EEhCzWBToVURWdrvOQEELeiY9GhQ4Y1IHcVE37kbmCrKX6UkqxaXHpw",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4387813,
+          "lng": 18.837752
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4404555302915,
+            "lng": 18.8394816802915
+          },
+          "southwest": {
+            "lat": 50.4377575697085,
+            "lng": 18.8367837197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "3dccdda5a2dfea2ee44da3f6fb0a9932c49d6011",
+      "name": "Rondo. Sklep sportowy",
+      "place_id": "ChIJw541eH8pEUcRbi-ltZVbKzM",
+      "reference": "CmRRAAAA79Kv_hiBYBt4psM0TotnTWdni2K49K-ICWfRJuUO03KhDEVq6kZjsvEzVtg2wenR7J-j5PoTg23ZUC-aF6ON-24y9EH6xcObe0xz5Fc-4q7EwUIejsGdAEG3qdWAwe-VEhD4vCqeOlx1uP859zW-KVv0GhQyho2JKqOV2cPjtAocV_XoVYDSyg",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4387813,
+          "lng": 18.837752
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4404555302915,
+            "lng": 18.8394816802915
+          },
+          "southwest": {
+            "lat": 50.4377575697085,
+            "lng": 18.8367837197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "c6687c99897454eb6a2e9164d1b275dc1a45f195",
+      "name": "Wodne Ochotnicze Pogotowie Ratunkowe",
+      "place_id": "ChIJw541eH8pEUcRENcsVOwuoqQ",
+      "reference": "CmRSAAAAzbZv89qTu5JkS1Xd8Kv2iIMIeW2qFC64iS7khJyNDnFwwl6mOT07HaIs-ggbZdECu-JTqvKAOLhXFGSV1qJglnsWpzuOjlkePxbggvL2cF6EN6szNskH9CurtB9vwVMFEhCcUmOGBYRtirxUTbb8SGT3GhQo9AxFI8CTlPWOvCEvNTVN_HeYlg",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.438626,
+          "lng": 18.837579
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4403765802915,
+            "lng": 18.8393979802915
+          },
+          "southwest": {
+            "lat": 50.4376786197085,
+            "lng": 18.83670001970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "ddc2316d5bbf05ccb67a26d3770a8810978fc300",
+      "name": "Biuro Podróży Anda Travel",
+      "opening_hours": {
+        "open_now": false,
+        "weekday_text": []
+      },
+      "place_id": "ChIJxZ41eH8pEUcRFS1oxuvin8U",
+      "reference": "CmRSAAAAJZZccU0Mz1fyMLonnWR5VbGSCkPblhAUgBcW3wNChjtArIErp1tYe9ncCE-eHoamQ4nw81oAwPtCDivMApMCJLctti9QyWkYvPZ-wfUvuCj5PWTqLf8CquQW-on8msyWEhAiGQHslhcGdGPXegNkGJkiGhR57m8G5NYuRPxPqXl4UCQIpJmBXA",
+      "scope": "GOOGLE",
+      "types": [
+        "travel_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.438626,
+          "lng": 18.837579
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4403765802915,
+            "lng": 18.8393979802915
+          },
+          "southwest": {
+            "lat": 50.4376786197085,
+            "lng": 18.83670001970849
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "4cd0bfd61d97f1ea4a070fd8d75f72af2a06da5f",
+      "name": "ANDAtek",
+      "opening_hours": {
+        "open_now": false,
+        "weekday_text": []
+      },
+      "place_id": "ChIJxZ41eH8pEUcRwqg1rT4lUjw",
+      "reference": "CmRRAAAADo1QPpi_6rj_hIHh2_vRUR06gpYCjuvF0zaXO6yY2VGlVtdap5Xhh4ezBNNNyV8kN5qpksywZSs7W7JciPDkZZ1RemOT2DBNUgnP1UmS6rtBL6UhG2KsqN0hqUWiw4RiEhDkgBFxC_1PiGW8t-UuGm4XGhTznBWm7ZYLHKpLP4WFD3S79FS6yQ",
+      "scope": "GOOGLE",
+      "types": [
+        "travel_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4387813,
+          "lng": 18.837752
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4404555302915,
+            "lng": 18.8394816802915
+          },
+          "southwest": {
+            "lat": 50.4377575697085,
+            "lng": 18.8367837197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "e2d047c632e870b2fc6bcd2a72b752ba29463490",
+      "name": "Global Rent a Car",
+      "place_id": "ChIJxZ41eH8pEUcRrAtr41v-JaA",
+      "reference": "CmRSAAAARH-N485dyqVWZXQYTVvzNBN1PAaCToslLKGSQrXB4i-nuFuyq-Kv7pd-cHtsI4ElSI_Yz-4xHrSv2_WEmYxQqLvavtbQmonihIgRbDgFMbvSA7EB7PKFbu7SrqNXoCv2EhDaaBh-orBimsGSAvix6hNFGhQpujG9xok5dLA7o7Qb7_Ct3mT78Q",
+      "scope": "GOOGLE",
+      "types": [
+        "car_rental",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.438744,
+          "lng": 18.837381
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4404868302915,
+            "lng": 18.8391909302915
+          },
+          "southwest": {
+            "lat": 50.43778886970851,
+            "lng": 18.8364929697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "46d444aa75be6d77515fdb7e9f892549ba89cf09",
+      "name": "Olivia",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJ6QfJjJ4pEUcRuTTz3rpLyNA",
+      "rating": 1,
+      "reference": "CmRSAAAAriL5MFJrLSebMhjY26IEQbwbBAtlK2dQJv3IJ2d_SJ2TuBe7xlJCCtc7oHCN1snX-4-XJvLObA7qtbxIHxzt0Nk6kiAm4yGjONjNsoUi3jL4xeLEdQkMzPF4VqnK31n7EhBVhTlrBbKN1dZ-ya52wCu0GhSESHUtIn6yVV9V8r1XwboxMiT-3Q",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "spa",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.438744,
+          "lng": 18.837381
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4404868302915,
+            "lng": 18.8391909302915
+          },
+          "southwest": {
+            "lat": 50.43778886970851,
+            "lng": 18.8364929697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "6c4ef023b11dbdde204ec3bf7bf6e1fc8805afbf",
+      "name": "MATYRAFA&TRAVEL Biuro Podróży",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "photos": [
+        {
+          "height": 660,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114533141881101786419/photos\">MATYRAFA&amp;TRAVEL Biuro Podróży</a>"
+          ],
+          "photo_reference": "CoQBdwAAAB-iUi_ustpSUjR5I9mnaFw5sk0Ivf1wnZMIx6FX1MyoPL8yv6N1dJBfniBfeciR4rZEYwSXv7vcyA-aZ3HFYJwjmVNCQ35B-N8_1-EWool0U1dwi99qj9z8L-JaRRvvQ0OjcBgcYNfdhBzKG0C5BwaG2ohuMv3A6DACLL3Cs9rUEhCnynxpSEhSvhpokidK_ctGGhSiu42moMgDBqM4ThNYZ-SUNy1tUg",
+          "width": 1200
+        }
+      ],
+      "place_id": "ChIJ_9oqen8pEUcRNTH8jp7gr-s",
+      "rating": 5,
+      "reference": "CmRSAAAAJxLF55vlaXrkocDEHcoFT44403bNESSiATcz5PcKGS-AliOdqvEWYEyaGP67vTPs-49LXFru4L9Rbu9dCV-VdYbgpM39CpygUUNc1YaHF11vWUIVxz4fyvsOj7ACvCEyEhCS6KJLJ_fvWO8Y8Jl7AnPOGhQs711neg4KBl_HSDWxnQ_tHzbnrg",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.43852510000001,
+          "lng": 18.8372076
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4398740802915,
+            "lng": 18.8385565802915
+          },
+          "southwest": {
+            "lat": 50.4371761197085,
+            "lng": 18.8358586197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "7e35bf8f350f2f0b42c56560f6e1356be50581ea",
+      "name": "Basen TG",
+      "opening_hours": {
+        "open_now": true,
+        "weekday_text": []
+      },
+      "place_id": "ChIJhf3JcH8pEUcReIz6tokx0K8",
+      "rating": 4,
+      "reference": "CmRSAAAACaHUBQRsqmMnbSdAsp8jrp2zJLvDUYK1mPcZ_3zDxZSAN3Rh4n82_JliQm-0JUOU6YZrB0dpKftWuPuqgOUBbr5iLHCnnlycd-t6vnLvewKZ02glJj8TgqN7YYbHyuTbEhAQJXA4zCHAxeS-LSeth35CGhTqU6UPl_t68bhsae9baFahyobQ-w",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Park Wodny, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.4386662,
+          "lng": 18.8376747
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4403892302915,
+            "lng": 18.8394614802915
+          },
+          "southwest": {
+            "lat": 50.4376912697085,
+            "lng": 18.8367635197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "c3ce8609e684e59c36948c908b1095e4f5902815",
+      "name": "Strzelnica CS24",
+      "place_id": "ChIJ9wpbeH8pEUcRnBXu52b68e8",
+      "rating": 5,
+      "reference": "CmRSAAAAWG12eEKdjuYUqO0lIRYDLjEdTG_Y1d5KDJVr7xlolbbPLK89JeAXP8v_G9JWGox_6vOO9WANdgnDbJutBnJbcKRndmMFb_zBf-lgJFX4wmLUGR2tRSGVWL-Rago8cowYEhB9jQiVxB51p4tJUTAwAfpqGhS2QdMe7e-NyA7inH1ApvsuPaMGrg",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.438781,
+          "lng": 18.837752
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4404553302915,
+            "lng": 18.8394817802915
+          },
+          "southwest": {
+            "lat": 50.4377573697085,
+            "lng": 18.8367838197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "d7d801a1efedc27a83b7465fa71eb99065b446f1",
+      "name": "Wypożyczalnia rowerów Parku Wodnego",
+      "place_id": "ChIJxZ41eH8pEUcRZCk4Ff4wdBg",
+      "reference": "CmRRAAAAMbMj8tYW2Wfc-j40i5LVN5yYd0YW9beLZ94srj6imUit_QHaTKUSWxFTBYK5w0rhnoTAgK4o3YswIGanF8cfCuZAPypAJ56oYbUbSe3rQH7z_6YCCjuJ1iy4Bc-mtyNYEhA860UJ16qKATL1pUgHvDmhGhS__r_YcJQY8yel8VsbkkD-8aszsg",
+      "scope": "GOOGLE",
+      "types": [
+        "amusement_park",
+        "gym",
+        "spa",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Obwodnica 8, Tarnowskie Góry"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 50.43930719999999,
+          "lng": 18.83803499999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.4407621302915,
+            "lng": 18.8393018
+          },
+          "southwest": {
+            "lat": 50.4380641697085,
+            "lng": 18.8365917
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id": "069e5278c59763286c7cad3f32fcae531397c98d",
+      "name": "Parking",
+      "place_id": "ChIJCV941YEpEUcR5nJkhLPMbD0",
+      "reference": "CmRbAAAArmXsJiJDjkLhZ-JeXWm8CC5AL5Hg-RDUxYdY3hhrX_N2Jh4i4gIWP7Eao-PEHgVYtfrZhy2gHvJoIqHOOcn76m6HFaf698EisLU_GIb9I4EXi2gEJmx9t7aWUUPyX9FqEhBz3_bQqnlqaQacOCZtvA8fGhQW0-7k1qMex2O2i7SQCZwsIBzvZQ",
+      "scope": "GOOGLE",
+      "types": [
+        "premise",
+        "parking",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Tarnowskie Góry"
+    }
+  ],
+  "status": "OK"
+}

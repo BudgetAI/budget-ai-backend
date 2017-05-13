@@ -18,8 +18,11 @@ object SmartBudgetServer extends ServerApp {
 
   implicit val categoriesService = DefaultHTTPServices.categoriesService
   implicit val operationsService = DefaultHTTPServices.operationsService
+  implicit val placesService = DefaultHTTPServices.placesService
   implicit val usersService = DefaultHTTPServices.usersService
-  val services = Task.gatherUnordered(List(categoriesService, operationsService, usersService).map(_.initializeIfNeeded()))
+  implicit val factualCategories = DefaultHTTPServices.factualCategories
+  implicit val placeFactualCategories = DefaultHTTPServices.placeFactualCategories
+  val services = Task.gatherUnordered(List(categoriesService, placesService, operationsService, usersService).map(_.initializeIfNeeded()))
 
   override def server(args: List[String]) = for {
     _ <- services.map(_ => Unit)

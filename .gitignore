@@ -21,3 +21,8 @@ project/plugins/project/
 .ensime
 
 .idea
+/bin/
+tags
+.cache*
+.classpath
+.settings

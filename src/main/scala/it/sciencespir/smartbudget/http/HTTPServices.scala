@@ -2,6 +2,7 @@ package it.sciencespir.smartbudget.http
 
 import it.sciencespir.smartbudget.DB.model._
 import it.sciencespir.smartbudget.DB.model.User._
+import it.sciencespir.smartbudget.DB.model.PlaceJSON._
 import Encoders._
 import it.sciencespir.smartbudget.DB.model.CategoryJSON._
 import it.sciencespir.smartbudget.DB.model.OperationJSON._
@@ -26,9 +27,9 @@ import scalaz.concurrent.Task
 trait HTTPServices {
   this: DatabaseComponent =>
 
-  def apply()(implicit categoriesService: CategoriesService, operationsService: OperationsService, usersService: UsersService): HttpService = {
+  def apply()(implicit categoriesService: CategoriesService, operationsService: OperationsService, usersService: UsersService, placesService: PlacesService): HttpService = {
     val filters = (LoggingFilter andThen GZipFilter)
-    return filters(HTTPLoginService() orElse CRUDResource[Category]("categories") orElse HTTPLoginService.authMiddleware(OperationsResource()))
+    return filters(HTTPLoginService() orElse CRUDResource[Category]("categories") orElse HTTPLoginService.authMiddleware(OperationsResource()) orElse HTTPLoginService.authMiddleware(PlacesResource()))
   }
 
   object HTTPLoginService {
@@ -119,18 +120,44 @@ trait HTTPServices {
 
       case GET -> Root / `basePath` / IdVar(id) as user =>
         modelService.find(id) flatMap {
-          case Some(model@Operation(_, _, _, _, _, user.id)) => Ok.apply(model)
+          case Some(model@Operation(_,_, _, _, _, _, user.id)) => Ok.apply(model)
           case Some(_) => Forbidden()
           case None => NotFound()
         }
 
       case DELETE -> Root / `basePath` / IdVar(id) as user =>
         modelService.find(id) flatMap {
-          case Some(model@Operation(_, _, _, _, _, user.id)) => modelService.delete(model)
+          case Some(model@Operation(_, _, _, _, _, _, user.id)) => modelService.delete(model)
             .flatMap(_ => NoContent())
           case Some(_) => Forbidden()
           case None => NotFound()
         }
+    }
+  }
+
+  object PlacesResource {
+    val basePath = "places"
+
+    def apply()(implicit placesService: PlacesService, 
+      jsonEncoder: EntityEncoder[Place], 
+      jsonListEncoder: EntityEncoder[List[Place]],
+      jsonPlaceDecoder: EntityDecoder[PlaceWithCategories]) = AuthedService[UserProfile] {
+
+      case GET -> Root / `basePath` as user =>
+        placesService
+          .list()
+          .map(_.toList)
+          .flatMap(Ok(_))
+
+      case request@PUT -> Root / `basePath` as user =>
+        request.req.decode[PlaceWithCategories] { model =>
+           placesService
+            .create(model)
+            .flatMap(Ok(_))
+
+        }
+
+
     }
   }
 

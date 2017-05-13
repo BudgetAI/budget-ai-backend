@@ -19,8 +19,7 @@ trait QueryComponent {
 
   import dbConfig.driver.api._
 
-  abstract class CRUDQuery[M <: CRUD, MT <: CRUDTable[M]](cons: Tag => MT) extends TableQuery[MT](cons) {
-
+  abstract class DBTQuery[M, MT <: Table[M]](cons: Tag => MT) extends TableQuery[MT](cons) {
 
     def initialize() =
       this.schema.create
@@ -35,15 +34,19 @@ trait QueryComponent {
           case x => DBIOAction.successful()
         }
 
-
     def list() =
       this.result
 
-    def find(id: Int) =
-      filter(_.id === id).result
-
     def insert(model: M) =
       this += model
+
+
+  }
+
+  abstract class CRUDQuery[M <: CRUD, MT <: CRUDTable[M]](cons: Tag => MT) extends DBTQuery[M, MT](cons) {
+
+    def find(id: Int) =
+      filter(_.id === id).result
 
     def update(model: M) =
       filter(_.id === model.id).update(model)
@@ -66,8 +69,29 @@ trait QueryComponent {
   class OperationsCRUDQuery extends CRUDQuery[Operation, Operations](new Operations(_)) {
     def list(userId: Int) =
       this.filter(_.user_id === userId).result
+
+    def withPlaces = 
+      this.join(places)
   }
 
   object operations extends OperationsCRUDQuery
+
+  class PlacesCRUDQuery extends DBTQuery[Place, Places](new Places(_)) {
+    
+  }
+
+  object places extends PlacesCRUDQuery
+
+  class FactualCategoriesCRUDQuery extends CRUDQuery[FactualCategory,FactualCategories ](new FactualCategories(_)) {
+
+  }
+
+  object factualCategories extends FactualCategoriesCRUDQuery
+
+  class PlaceFactualCategoriesCRUDQuery extends DBTQuery[PlaceFactualCategory,PlaceFactualCategories ](new PlaceFactualCategories(_)) {
+
+  }
+
+  object placeFactualCategories extends PlaceFactualCategoriesCRUDQuery
 
 }
