@@ -6,6 +6,9 @@ logLevel := Level.Debug
 
 resolvers += Resolver.bintrayRepo("hmrc", "releases")
 resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
+resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases"
+  
 
 val http4sVersion = "0.15.11a"
 val slickVersion = "3.2.0"
