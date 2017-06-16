@@ -74,8 +74,10 @@ trait ServicesComponent {
       task(places.initializeIfNeeded)
         .flatMap(_ ⇒ task(factualCategories.initializeIfNeeded))
         .flatMap(_ ⇒ task(placeFactualCategories.initializeIfNeeded))
-        .flatMap(_ ⇒ FactualCategories.apiCategories
-          .flatMap(cats ⇒ this.create(cats.data).map(_ ⇒ Unit)))
+    }
+
+    def initializeData(task: Task[FactualCategoriesAPI]) = {
+      task.flatMap(cats => this.create(cats.data).map(_ => Unit))
     }
 
     def create(placewc: PlaceWithCategories): Task[Place] =

@@ -10,6 +10,7 @@ import org.http4s.server.ServerApp
 
 import scalaz._
 import Scalaz._
+import it.sciencespir.smartbudget.DB.service.FactualCategories
 
 
 object DefaultHTTPServices extends HTTPServices with DevDatabaseComponent
@@ -22,7 +23,7 @@ object SmartBudgetServer extends ServerApp {
   implicit val usersService = DefaultHTTPServices.usersService
   implicit val factualCategories = DefaultHTTPServices.factualCategories
   implicit val placeFactualCategories = DefaultHTTPServices.placeFactualCategories
-  val services = Task.gatherUnordered(List(categoriesService, placesService, operationsService, usersService).map(_.initializeIfNeeded()))
+  val services = Task.gatherUnordered(List(categoriesService, placesService, operationsService, usersService).map(_.initializeIfNeeded())).flatMap(_ => placesService.initializeData(FactualCategories.apiCategories))
 
   override def server(args: List[String]) = for {
     _ <- services.map(_ => Unit)

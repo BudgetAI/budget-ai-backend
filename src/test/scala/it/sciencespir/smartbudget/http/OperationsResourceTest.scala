@@ -24,8 +24,8 @@ class OperationsResourceTest extends WordSpec with BeforeAndAfter {
   }
   before {
     TestHttpService.usersService.initializeIfNeeded().unsafePerformSync
-    TestHttpService.placesService.initializeIfNeeded().unsafePerformSync
     TestHttpService.categoriesService.initializeIfNeeded().unsafePerformSync
+    TestHttpService.placesService.initializeIfNeeded().unsafePerformSync
     TestHttpService.operationsService.initializeIfNeeded().unsafePerformSync
 
 
