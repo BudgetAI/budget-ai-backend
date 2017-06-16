@@ -38,3 +38,7 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "scalaz-scalatest" % "1.1.0" % "test",
   "org.scalacheck" %% "scalacheck" % "1.13.4" % "test"
 )
+
+enablePlugins(DockerPlugin)
+
+dockerAutoPackageJavaApplication()
