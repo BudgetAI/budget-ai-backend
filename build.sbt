@@ -6,7 +6,7 @@ logLevel := Level.Debug
 
 resolvers += Resolver.bintrayRepo("hmrc", "releases")
 resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
-resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases"
 resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases"
   
 
