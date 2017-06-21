@@ -1,4 +1,8 @@
 language: scala
+services:
+  - docker
+before-install:
+  - pip install --user awscli
 jdk:
   - oraclejdk8
 scala:
