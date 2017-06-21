@@ -3,6 +3,7 @@ services:
   - docker
 before-install:
   - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
 jdk:
   - oraclejdk8
 scala:
