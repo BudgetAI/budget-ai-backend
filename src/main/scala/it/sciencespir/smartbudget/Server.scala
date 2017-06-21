@@ -31,7 +31,7 @@ object SmartBudgetServer extends ServerApp with StrictLogging {
     _ <- services.map{ _ => () }
     server <- BlazeBuilder
       .withServiceExecutor(Executor())
-      .bindHttp(8081)
+      .bindHttp(8081, "0.0.0.0")
       .mountService(DefaultHTTPServices())
       .start
   } yield server
