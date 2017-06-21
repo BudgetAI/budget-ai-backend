@@ -8,6 +8,7 @@ import slick.jdbc.meta.MTable
 
 import scala.concurrent.ExecutionContext
 import scala.util.{Success, Try}
+import scala.util.Failure
 
 
 /**
@@ -27,11 +28,12 @@ trait QueryComponent {
     def initializeIfNeeded(implicit executionContext: ExecutionContext) =
       MTable
         .getTables
-        .filter(!_.exists(_.name.name == this.shaped.value.tableName))
+        .map(_.exists(_.name.name == this.shaped.value.tableName))
         .asTry
         .flatMap {
-          case Success(_) => this.initialize()
-          case x => DBIOAction.successful()
+          case Success(false) => this.initialize()
+          case Success(true) => DBIOAction.successful()
+          case Failure(e) => DBIOAction.failed(e)
         }
 
     def list() =

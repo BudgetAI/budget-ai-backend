@@ -15,6 +15,7 @@ import scalaz.concurrent.Task
 import com.typesafe.scalalogging.StrictLogging
 import it.sciencespir.smartbudget.DB.driver.DBConfigProvider
 import it.sciencespir.smartbudget.DB.table.TablesComponent
+import com.typesafe.scalalogging.StrictLogging
 
 /**
  * Created by kamilbadyla on 20/01/17.
@@ -25,7 +26,7 @@ trait ServicesComponent {
 
   import dbConfig.driver.api._
 
-  abstract class DBTService[M, MT <: Table[M]](query: QueryComponent#DBTQuery[M, MT])(implicit db: DatabaseComponent#DatabaseDef, executorService: ExecutorService) {
+  abstract class DBTService[M, MT <: Table[M]](query: QueryComponent#DBTQuery[M, MT])(implicit db: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends StrictLogging{
 
     implicit val executionContext = ExecutionContext.fromExecutorService(executorService)
 
@@ -49,8 +50,8 @@ trait ServicesComponent {
           case Failure(x) ⇒ cb(-\/(x))
         }
       }
-    }
 
+    }
   }
 
   abstract class CRUDService[M <: CRUD, MT <: CRUDTable[M]](query: QueryComponent#CRUDQuery[M, MT])(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends DBTService[M, MT](query) with StrictLogging {
@@ -77,7 +78,7 @@ trait ServicesComponent {
     }
 
     def initializeData(task: Task[FactualCategoriesAPI]) = {
-      task.flatMap(cats => this.create(cats.data).map(_ => Unit))
+      task.flatMap(cats ⇒ this.create(cats.data).map(_ ⇒ Unit))
     }
 
     def create(placewc: PlaceWithCategories): Task[Place] =

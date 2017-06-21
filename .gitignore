@@ -26,3 +26,5 @@ tags
 .cache*
 .classpath
 .settings
+.env
+logs

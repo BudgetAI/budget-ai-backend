@@ -6,6 +6,8 @@ import it.sciencespir.smartbudget.DB.table.TablesComponent
 import slick.backend.DatabaseConfig
 import slick.driver.H2Driver.api
 import slick.driver.JdbcProfile
+import com.typesafe.scalalogging.StrictLogging
+import com.typesafe.config.ConfigFactory
 
 /**
   * Created by kamilbadyla on 20/01/17.
@@ -25,7 +27,7 @@ trait TestDatabaseComponent extends DatabaseComponent with TestDBConfig {
 
 object DB {
   def developmentDBProvider = new DBConfigProvider {
-    override val dbConfig: DatabaseConfig[JdbcProfile] = DatabaseConfig.forConfig("development")
+    override val dbConfig: DatabaseConfig[JdbcProfile] = DatabaseConfig.forConfig("development", ConfigFactory.load())
   }
 
   def testDBProvider = new DBConfigProvider {

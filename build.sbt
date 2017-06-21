@@ -39,7 +39,9 @@ libraryDependencies ++= Seq(
 
   "org.scalatest" %% "scalatest" % "3.0.1" % "test",
   "org.typelevel" %% "scalaz-scalatest" % "1.1.0" % "test",
-  "org.scalacheck" %% "scalacheck" % "1.13.4" % "test"
+  "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
+
+  "com.typesafe" % "config" % "1.3.1"
 )
 
 enablePlugins(DockerPlugin)
