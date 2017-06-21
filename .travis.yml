@@ -9,7 +9,7 @@ jdk:
 scala:
   - 2.11.11
 script:
-  - eval $(aws ecr get-login --region eu-west-1)
+  - eval $(aws ecr get-login --region eu-west-2)
   - sbt docker
   - docker tag it.sciencespir/smart-budget:latest 719711071548.dkr.ecr.us-west-2.amazonaws.com/aibudget:latest
   - docker push 719711071548.dkr.ecr.us-west-2.amazonaws.com/aibudget:latest
