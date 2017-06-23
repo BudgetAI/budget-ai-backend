@@ -1,4 +1,4 @@
-package it.sciencespir.smartbudget.DB.driver
+package it.sciencespir.smartbudget.persistence.driver
 
 /**
   * Created by kamilbadyla on 20/01/17.

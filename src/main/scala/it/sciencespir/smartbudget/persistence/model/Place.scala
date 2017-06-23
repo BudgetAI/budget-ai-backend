@@ -1,4 +1,4 @@
-package it.sciencespir.smartbudget.DB.model
+package it.sciencespir.smartbudget.persistence.model
 
 import scala.collection.immutable._
 import argonaut.Argonaut._
@@ -26,7 +26,7 @@ case class Places(results: List[Place], status: String)
 
 
 object PlaceJSON {
-  import it.sciencespir.smartbudget.DB.model.GeoLocationJSON._
+  import it.sciencespir.smartbudget.persistence.model.GeoLocationJSON._
 
   implicit val placeJSONDecoder: DecodeJson[Place] =
     DecodeJson(c ⇒ for {

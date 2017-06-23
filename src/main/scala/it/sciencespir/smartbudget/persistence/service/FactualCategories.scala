@@ -1,7 +1,7 @@
-package it.sciencespir.smartbudget.DB.service
+package it.sciencespir.smartbudget.persistence.service
 
 import org.http4s.dsl._
-import it.sciencespir.smartbudget.DB.model.FactualCategory
+import it.sciencespir.smartbudget.persistence.model.FactualCategory
 import argonaut._, argonaut.Argonaut._
 import scalaz._, Scalaz._
 import scala.collection.immutable._

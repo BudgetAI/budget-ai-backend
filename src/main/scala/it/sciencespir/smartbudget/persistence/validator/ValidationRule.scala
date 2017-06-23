@@ -1,4 +1,4 @@
-package it.sciencespir.smartbudget.DB.validator
+package it.sciencespir.smartbudget.persistence.validator
 
 /**
   * Created by kamilbadyla on 28.01.2017.

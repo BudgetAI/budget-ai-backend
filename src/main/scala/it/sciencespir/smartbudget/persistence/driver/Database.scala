@@ -1,8 +1,8 @@
-package it.sciencespir.smartbudget.DB.driver
+package it.sciencespir.smartbudget.persistence.driver
 
-import it.sciencespir.smartbudget.DB.query.QueryComponent
-import it.sciencespir.smartbudget.DB.service.ServicesComponent
-import it.sciencespir.smartbudget.DB.table.TablesComponent
+import it.sciencespir.smartbudget.persistence.query.QueryComponent
+import it.sciencespir.smartbudget.persistence.service.ServicesComponent
+import it.sciencespir.smartbudget.persistence.table.TablesComponent
 import slick.backend.DatabaseConfig
 import slick.driver.H2Driver.api
 import slick.driver.JdbcProfile

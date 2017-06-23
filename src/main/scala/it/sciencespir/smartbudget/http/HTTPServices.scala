@@ -1,20 +1,20 @@
 package it.sciencespir.smartbudget.http
 
-import it.sciencespir.smartbudget.DB.model._
-import it.sciencespir.smartbudget.DB.model.User._
-import it.sciencespir.smartbudget.DB.model.PlaceJSON._
+import it.sciencespir.smartbudget.persistence.model._
+import it.sciencespir.smartbudget.persistence.model.User._
+import it.sciencespir.smartbudget.persistence.model.PlaceJSON._
 import Encoders._
-import it.sciencespir.smartbudget.DB.model.CategoryJSON._
-import it.sciencespir.smartbudget.DB.model.OperationJSON._
+import it.sciencespir.smartbudget.persistence.model.CategoryJSON._
+import it.sciencespir.smartbudget.persistence.model.OperationJSON._
 import org.http4s._
 import org.http4s.dsl._
 import org.http4s.server.syntax._
 
 import scalaz.{Category => _, _}
 import scalaz.Scalaz._
-import it.sciencespir.smartbudget.DB.validator.Validation._
+import it.sciencespir.smartbudget.persistence.validator.Validation._
 import APIError._
-import it.sciencespir.smartbudget.DB.driver.DatabaseComponent
+import it.sciencespir.smartbudget.persistence.driver.DatabaseComponent
 import org.http4s.headers.Authorization
 import org.http4s.server.AuthMiddleware
 
@@ -66,7 +66,7 @@ trait HTTPServices {
 
   object CRUDResource {
     def apply[T <: CRUD](basePath: String)(implicit
-                                           modelService: CRUDService[T, _],
+                                           modelService: DBCRUDService[T, _],
                                            jsonEncoder: EntityEncoder[T],
                                            jsonListEncoder: EntityEncoder[List[T]],
                                            jsonDecoder: EntityDecoder[T]) = HttpService {

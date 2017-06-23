@@ -3,7 +3,7 @@ package it.sciencespir.smartbudget.http
 import argonaut._
 import Argonaut._
 import ArgonautShapeless._
-import it.sciencespir.smartbudget.DB.validator.Validation.RuleViolation
+import it.sciencespir.smartbudget.persistence.validator.Validation.RuleViolation
 import it.sciencespir.smartbudget.http.Encoders.modelEncoder
 import org.http4s.{GenericMessageBodyFailure, Response, Status}
 import org.http4s.argonaut.ArgonautInstances

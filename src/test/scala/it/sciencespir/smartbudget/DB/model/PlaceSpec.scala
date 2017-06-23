@@ -1,10 +1,10 @@
-package it.sciencespir.smartbudget.DB.model
+package it.sciencespir.smartbudget.persistence.model
 
 import org.scalatest.{WordSpec, Matchers}
 import java.io.InputStream
 import scalaz._, Scalaz._
 import argonaut._, Argonaut._
-import it.sciencespir.smartbudget.DB.model.PlaceJSON._
+import it.sciencespir.smartbudget.persistence.model.PlaceJSON._
 
 class PlaceSpec extends WordSpec with Matchers {
 //  "PlaceJSONDecoder" should {

@@ -22,7 +22,7 @@ project/plugins/project/
 
 .idea
 /bin/
-tags
+.tags
 .cache*
 .classpath
 .settings

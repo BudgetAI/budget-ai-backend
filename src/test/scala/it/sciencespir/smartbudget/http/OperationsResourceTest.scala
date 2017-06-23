@@ -1,12 +1,12 @@
 package it.sciencespir.smartbudget.http
 
-import it.sciencespir.smartbudget.DB.model._
-import it.sciencespir.smartbudget.DB.model.OperationJSON._
+import it.sciencespir.smartbudget.persistence.model._
+import it.sciencespir.smartbudget.persistence.model.OperationJSON._
 import org.http4s._
 import org.scalatest._
 import org.http4s.dsl._
 import Encoders._
-import it.sciencespir.smartbudget.DB.driver.{DB, TestDatabaseComponent}
+import it.sciencespir.smartbudget.persistence.driver.{DB, TestDatabaseComponent}
 import org.joda.time.DateTime
 import slick.driver.PostgresDriver
 

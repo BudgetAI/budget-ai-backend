@@ -1,4 +1,4 @@
-package it.sciencespir.smartbudget.DB.driver
+package it.sciencespir.smartbudget.persistence.driver
 
 import java.util.concurrent.ExecutorService
 

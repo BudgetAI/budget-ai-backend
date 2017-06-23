@@ -1,14 +1,14 @@
-package it.sciencespir.smartbudget.DB.model
+package it.sciencespir.smartbudget.persistence.model
 
 import argonaut.Argonaut._
 import argonaut._
 import ArgonautShapeless._
 import com.github.t3hnar.bcrypt._
-import it.sciencespir.smartbudget.DB.validator.Validation.RuleViolation
+import it.sciencespir.smartbudget.persistence.validator.Validation.RuleViolation
 
 import scalaz._
 import Scalaz._
-import it.sciencespir.smartbudget.DB.validator.Validation.dsl._
+import it.sciencespir.smartbudget.persistence.validator.Validation.dsl._
 import uk.gov.hmrc.emailaddress.EmailAddress
 
 import scalaz.concurrent.Task

@@ -1,10 +1,10 @@
-package it.sciencespir.smartbudget.DB.service
+package it.sciencespir.smartbudget.persistence.service
 
 import java.util.UUID
 import java.util.concurrent.ExecutorService
 
-import it.sciencespir.smartbudget.DB.model._
-import it.sciencespir.smartbudget.DB.query._
+import it.sciencespir.smartbudget.persistence.model._
+import it.sciencespir.smartbudget.persistence.query._
 import slick.backend.DatabaseComponent
 import com.github.t3hnar.bcrypt._
 
@@ -13,8 +13,8 @@ import scala.util.{Failure, Success}
 import scalaz.{-\/, EitherT, \/, \/-}
 import scalaz.concurrent.Task
 import com.typesafe.scalalogging.StrictLogging
-import it.sciencespir.smartbudget.DB.driver.DBConfigProvider
-import it.sciencespir.smartbudget.DB.table.TablesComponent
+import it.sciencespir.smartbudget.persistence.driver.DBConfigProvider
+import it.sciencespir.smartbudget.persistence.table.TablesComponent
 import com.typesafe.scalalogging.StrictLogging
 
 /**
@@ -26,7 +26,7 @@ trait ServicesComponent {
 
   import dbConfig.driver.api._
 
-  abstract class DBTService[M, MT <: Table[M]](query: QueryComponent#DBTQuery[M, MT])(implicit db: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends StrictLogging{
+  abstract class DBTService[M, MT <: Table[M]](query: QueryComponent#DBTQuery[M, MT])(implicit db: DatabaseComponent#DatabaseDef, executorService: ExecutorService) {
 
     implicit val executionContext = ExecutionContext.fromExecutorService(executorService)
 
@@ -54,7 +54,7 @@ trait ServicesComponent {
     }
   }
 
-  abstract class CRUDService[M <: CRUD, MT <: CRUDTable[M]](query: QueryComponent#CRUDQuery[M, MT])(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends DBTService[M, MT](query) with StrictLogging {
+  abstract class DBCRUDService[M <: CRUD, MT <: CRUDTable[M]](query: QueryComponent#CRUDQuery[M, MT])(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends DBTService[M, MT](query) with CRUDService[M] {
 
     def find(id: Int): Task[Option[M]] =
       task(query.find(id)).map(_.headOption)
@@ -66,7 +66,7 @@ trait ServicesComponent {
       task(query.delete(model))
   }
 
-  class CategoriesService(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends CRUDService(categories)
+  class CategoriesService(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends DBCRUDService(categories)
   object categoriesService extends CategoriesService
 
   class PlacesService(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends DBTService(places) {
@@ -98,7 +98,7 @@ trait ServicesComponent {
 
   object placesService extends PlacesService
 
-  class UsersService(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends CRUDService(users) {
+  class UsersService(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends DBCRUDService(users) {
     def login(userLogin: UserLoginForm) =
       find(userLogin.email).map(_.filter(user ⇒ userLogin.password.isBcrypted(user.password_hash)).map(UserAuth(_)))
 
@@ -108,7 +108,7 @@ trait ServicesComponent {
   }
   object usersService extends UsersService
 
-  class OperationsService(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends CRUDService(operations) {
+  class OperationsService(implicit database: DatabaseComponent#DatabaseDef, executorService: ExecutorService) extends DBCRUDService(operations) {
     def list(userId: Int): Task[Seq[Operation]] =
       task(operations.list(userId))
   }

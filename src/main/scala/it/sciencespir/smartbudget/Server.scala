@@ -1,6 +1,6 @@
 package it.sciencespir
 
-import it.sciencespir.smartbudget.DB.driver.{DevDatabaseComponent, DevelopmentDBConfig}
+import it.sciencespir.smartbudget.persistence.driver.{DevDatabaseComponent, DevelopmentDBConfig}
 import it.sciencespir.smartbudget.http.HTTPServices
 import it.sciencespir.smartbudget.util.Executor
 import org.http4s.server.blaze.BlazeBuilder
@@ -10,7 +10,7 @@ import org.http4s.server.ServerApp
 
 import scalaz._
 import Scalaz._
-import it.sciencespir.smartbudget.DB.service.FactualCategories
+import it.sciencespir.smartbudget.persistence.service.FactualCategories
 import com.typesafe.scalalogging.StrictLogging
 
 
@@ -31,7 +31,7 @@ object SmartBudgetServer extends ServerApp with StrictLogging {
     _ <- services.map{ _ => () }
     server <- BlazeBuilder
       .withServiceExecutor(Executor())
-      .bindHttp(8081)
+      .bindHttp(8081, "0.0.0.0")
       .mountService(DefaultHTTPServices())
       .start
   } yield server

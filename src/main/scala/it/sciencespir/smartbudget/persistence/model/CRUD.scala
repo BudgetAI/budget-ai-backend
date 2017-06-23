@@ -1,4 +1,4 @@
-package it.sciencespir.smartbudget.DB.model
+package it.sciencespir.smartbudget.persistence.model
 
 /**
   * Created by kamilbadyla on 20/01/17.

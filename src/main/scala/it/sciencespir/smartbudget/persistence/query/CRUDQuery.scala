@@ -1,8 +1,8 @@
-package it.sciencespir.smartbudget.DB.query
+package it.sciencespir.smartbudget.persistence.query
 
-import it.sciencespir.smartbudget.DB.driver.DBConfigProvider
-import it.sciencespir.smartbudget.DB.table._
-import it.sciencespir.smartbudget.DB.model._
+import it.sciencespir.smartbudget.persistence.driver.DBConfigProvider
+import it.sciencespir.smartbudget.persistence.table._
+import it.sciencespir.smartbudget.persistence.model._
 import slick.dbio.DBIOAction
 import slick.jdbc.meta.MTable
 

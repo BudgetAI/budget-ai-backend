@@ -2,7 +2,7 @@ package it.sciencespir.smartbudget.http
 
 import argonaut._
 import Argonaut._
-import it.sciencespir.smartbudget.DB.model._
+import it.sciencespir.smartbudget.persistence.model._
 import org.http4s.EntityEncoder
 import org.http4s.argonaut.ArgonautInstances
 import org.joda.time.DateTime

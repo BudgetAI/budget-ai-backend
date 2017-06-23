@@ -1,4 +1,4 @@
-package it.sciencespir.smartbudget.DB.model
+package it.sciencespir.smartbudget.persistence.model
 
 import org.joda.time.DateTime
 import org.scalatest.prop.GeneratorDrivenPropertyChecks

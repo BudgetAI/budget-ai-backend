@@ -1,11 +1,11 @@
-package it.sciencespir.smartbudget.DB.service
+package it.sciencespir.smartbudget.persistence.service
 
 import org.scalatest._
 import Matchers._
 import Inspectors._
 import argonaut.Parse
 import java.io.InputStream
-import it.sciencespir.smartbudget.DB.service.FactualCategories._
+import it.sciencespir.smartbudget.persistence.service.FactualCategories._
 
 class FactualCategoriesSpec extends WordSpec with Matchers {
   "FactualCategories json decoder" should {

@@ -1,11 +1,11 @@
-package it.sciencespir.smartbudget.DB.table
+package it.sciencespir.smartbudget.persistence.table
 
-import it.sciencespir.smartbudget.DB.driver.DBConfigProvider
-import it.sciencespir.smartbudget.DB.model.{Category, FlatLocationOperation, Operation, User}
-import it.sciencespir.smartbudget.DB.query.QueryComponent
+import it.sciencespir.smartbudget.persistence.driver.DBConfigProvider
+import it.sciencespir.smartbudget.persistence.model.{Category, FlatLocationOperation, Operation, User}
+import it.sciencespir.smartbudget.persistence.query.QueryComponent
 import org.joda.time.DateTime
-import it.sciencespir.smartbudget.DB.driver.PGDriver.api._
-import it.sciencespir.smartbudget.DB.model._
+import it.sciencespir.smartbudget.persistence.driver.PGDriver.api._
+import it.sciencespir.smartbudget.persistence.model._
 
 /**
  * Created by kamilbadyla on 14/01/17.
